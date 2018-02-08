@@ -1,6 +1,3 @@
-FROM alpine:latest
+FROM python:alpine
 
-RUN apk --update add py-pip groff less && \
-    pip install --upgrade pip && \
-	pip install awscli && \
-    rm /var/cache/apk/*
+RUN pip install awscli
